@@ -1,0 +1,12 @@
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+MOLTEN_HOME = $(SRCROOT)/Molten
+
+HEADER_SEARCH_PATHS[arch=arm*] = $(inherited) $(MOLTEN_HOME)/MoltenGL/RedirectHeaders/include/**
+
+FRAMEWORK_SEARCH_PATHS[arch=arm*] = $(inherited) $(MOLTEN_HOME)/MoltenGL/iOS/framework $(MOLTEN_HOME)/MoltenGLShaderConverter/iOS
+
+OTHER_LDFLAGS[arch=arm*] = $(inherited) -ObjC -framework Metal -framework GLKit -lc++ -framework MoltenGL -framework MoltenGLShaderConverter
+
+CLANG_ENABLE_MODULES = NO
