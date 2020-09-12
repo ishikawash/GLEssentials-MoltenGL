@@ -70,4 +70,5 @@ fastlane/test_output
 iOSInjectionProject/
 
 # MoltenGL
-Molten
+Molten/MoltenGL
+Molten/MoltenGLShaderConverter
